@@ -215,6 +215,7 @@ $.validator = function( options, form ) {
 	this.init();
 };
 
+
 // http://jqueryvalidation.org/jQuery.validator.format/
 $.validator.format = function( source, params ) {
 	if ( arguments.length === 1 ) {
@@ -256,7 +257,6 @@ $.extend( $.validator, {
 		ignoreTitle: false,
 		onfocusin: function( element ) {
 			this.lastActive = element;
-
 			// Hide error label and remove error class on focus if enabled
 			if ( this.settings.focusCleanup ) {
 				if ( this.settings.unhighlight ) {
@@ -341,7 +341,6 @@ $.extend( $.validator, {
 			this.pending = {};
 			this.invalid = {};
 			this.reset();
-
 			var groups = ( this.groups = {} ),
 				rules;
 			$.each( this.settings.groups, function( key, value ) {
